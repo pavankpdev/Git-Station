@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/d3cfecb2a1.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero_contents">
+        <h1 class="text-primary display-2">Git Station</h1>
+        <p class="lead">
+          Find the right commands you need without digging through the web.
+        </p>
+        <div class="searchBar">
+          <input
+            id="searchQueryInput"
+            type="text"
+            name="searchQueryInput"
+            placeholder="Search"
+            value=""
+          />
+          <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="command_lists">
+        <div class="card">
+          <div class="card_body">
+            <h2 class="title">
+              Add another URL to a remote, so both remotes get updated on each
+              push
+            </h2>
+            <div class="git_code_container">
+              <code>
+                git remote set-url --add &lt;remote_name&gt; &lt;remote_url&gt;
+              </code>
+              <i class="fas fa-copy text-secondary"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
