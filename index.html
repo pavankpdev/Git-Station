@@ -9,18 +9,64 @@
     <meta name="theme-color" content="#000000" />
 
     <link rel="manifest" href="./manifest.webmanifest" />
-    <link rel="shortcut icon" href="./favicon.png" />
+    <link
+      rel="shortcut icon"
+      href="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+    />
 
     <link rel="stylesheet" href="./src/app.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
+    />
     <script
       src="https://kit.fontawesome.com/d3cfecb2a1.js"
       crossorigin="anonymous"
+      async
     ></script>
-    <title>ais-ecommerce-demo-app</title>
+    <!-- Primary Meta Tags -->
+    <title>Git Station - All usefull git commands in one place</title>
+    <meta
+      name="title"
+      content="Git Station - All usefull git commands in one place"
+    />
+    <meta name="description" content="All usefull git commands in one place" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://main.d23zu1s17t6ube.amplifyapp.com/"
+    />
+    <meta
+      property="og:title"
+      content="Git Station - All usefull git commands in one place"
+    />
+    <meta
+      property="og:description"
+      content="All usefull git commands in one place"
+    />
+    <meta property="og:image" content="" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://main.d23zu1s17t6ube.amplifyapp.com/"
+    />
+    <meta
+      property="twitter:title"
+      content="Git Station - All usefull git commands in one place"
+    />
+    <meta
+      property="twitter:description"
+      content="All usefull git commands in one place"
+    />
+    <meta property="twitter:image" content="" />
   </head>
 
   <body>
@@ -40,16 +86,19 @@
     <script src="https://cdn.jsdelivr.net/algoliasearch/3.32.0/algoliasearchLite.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.15.0"></script>
     <script src="./src/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
     <script>
+      // Create an instance of Notyf
+      var notyf = new Notyf();
       function copyCode() {
         const copyText = document.getElementById('copy').innerHTML;
         navigator.clipboard
           .writeText(copyText)
           .then(() => {
-            alert('Copied 🥳');
+            notyf.success('Copied 🥳');
           })
           .catch(() => {
-            alert('Something went wrong');
+            notyf.error('Something went wrong');
           });
       }
     </script>
