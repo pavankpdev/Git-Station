@@ -40,5 +40,18 @@
     <script src="https://cdn.jsdelivr.net/algoliasearch/3.32.0/algoliasearchLite.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.15.0"></script>
     <script src="./src/app.js"></script>
+    <script>
+      function copyCode() {
+        const copyText = document.getElementById('copy').innerHTML;
+        navigator.clipboard
+          .writeText(copyText)
+          .then(() => {
+            alert('Copied 🥳');
+          })
+          .catch(() => {
+            alert('Something went wrong');
+          });
+      }
+    </script>
   </body>
 </html>

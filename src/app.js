@@ -25,10 +25,10 @@ search.addWidgets([
             {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
             </h2>
             <div class="git_code_container">
-              <code>
+              <code id="copy">
               {{#helpers.highlight}}{ "attribute": "gitCommand" }{{/helpers.highlight}}
               </code>
-              <i class="fas fa-copy text-secondary"></i>
+              <button id="copybtn" onclick="copyCode()" >copy</button>
             </div>
           </div>
         </div>
