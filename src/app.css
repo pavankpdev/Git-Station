@@ -56,6 +56,10 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+button {
+  white-space:normal !important;
+  word-wrap:break-word;
+}
 .switch {
   position: absolute;
   top: 15px;
@@ -124,7 +128,10 @@ body {
 .card:hover {
   border: 2px solid var(--primary);
 }
-
+code {
+  width: 80%;
+  word-wrap: break-word;
+}
 .command_lists .card .card_body .title {
   font-size: 1rem;
 }
