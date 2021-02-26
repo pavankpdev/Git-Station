@@ -71,6 +71,7 @@
 
   <body>
     <div class="container">
+      <i class="switch fas fa-moon fa-2x"></i>
       <div class="ais-InstantSearch">
         <div class="hero_contents ">
           <h1 class="text-primary display-2">Git Station</h1>
@@ -101,6 +102,38 @@
             notyf.error('Something went wrong');
           });
       }
+
+      const switchMode = document.getElementsByClassName('switch');
+      switchMode[0].addEventListener('click', () => {
+        const currentMode = switchMode[0].classList.contains('fa-sun');
+        if (currentMode) {
+          switchMode[0].classList.remove('fa-sun');
+          switchMode[0].classList.add('fa-moon');
+        } else {
+          switchMode[0].classList.remove('fa-moon');
+          switchMode[0].classList.add('fa-sun');
+        }
+
+        console.log(switchMode[0].classList);
+        document.documentElement.style.setProperty(
+          '--primary',
+          currentMode ? '#ee6c4d' : '#e6a899'
+        );
+        document.documentElement.style.setProperty(
+          '--bg',
+          currentMode ? '#eef0f2' : '#222831'
+        );
+        document.documentElement.style.setProperty(
+          '--text',
+          currentMode ? '#1d3557' : '#9fbadf'
+        );
+        document.documentElement.style.setProperty(
+          '--searchbg',
+          currentMode ? '#fff' : '#1a1a2e'
+        );
+      });
+
+     
     </script>
   </body>
 </html>
