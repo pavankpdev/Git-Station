@@ -1,57 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="shortcut icon" href="./favicon.png" />
+
+    <link rel="stylesheet" href="./src/app.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/styles.css" />
     <script
       src="https://kit.fontawesome.com/d3cfecb2a1.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <title>ais-ecommerce-demo-app</title>
   </head>
+
   <body>
     <div class="container">
-      <div class="hero_contents">
-        <h1 class="text-primary display-2">Git Station</h1>
-        <p class="lead">
-          Find the right commands you need without digging through the web.
-        </p>
-        <div class="searchBar">
-          <input
-            id="searchQueryInput"
-            type="text"
-            name="searchQueryInput"
-            placeholder="Search"
-            value=""
-          />
-          <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
+      <div class="ais-InstantSearch">
+        <div class="hero_contents ">
+          <h1 class="text-primary display-2">Git Station</h1>
+          <p class="lead">All usefull git commands in one place</p>
 
-      <div class="command_lists">
-        <div class="card">
-          <div class="card_body">
-            <h2 class="title">
-              Add another URL to a remote, so both remotes get updated on each
-              push
-            </h2>
-            <div class="git_code_container">
-              <code>
-                git remote set-url --add &lt;remote_name&gt; &lt;remote_url&gt;
-              </code>
-              <i class="fas fa-copy text-secondary"></i>
-            </div>
-          </div>
+          <div id="searchbox"></div>
+        </div>
+        <div class="command_lists">
+          <div id="hits"></div>
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3.32.0/algoliasearchLite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.15.0"></script>
+    <script src="./src/app.js"></script>
   </body>
 </html>
